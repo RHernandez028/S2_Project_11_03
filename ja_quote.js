@@ -13,12 +13,20 @@
    quotation tag in the Web page.
 
 */
-vark
+// This set a limit of intergers available to be returned in the randomlnt function
+var randomQ = randomlnt(0, 9);
 
-
-function randomlnt(lowest, size) {
-    Math.floor(Math.random(lowest, size));
+// this funcitons gets a random integer
+function randomlnt() {
+    return Math.floor(Math.random()* 10);
 }
+
+//this varibale gets the value of the quoteElem a puts it in the quote tag in the HTML 
+var quoteElem = document.getElementsByTagName('quote');
+
+// here the function getQuote is called to gets the and puts the value in the HTML
+quoteElem[0].innerHTML = getQuote(randomQ);
+
 
 
 function getQuote(n) {
